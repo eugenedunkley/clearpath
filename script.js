@@ -84,3 +84,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         section.style.animationDelay = `${index * 0.2}s`;
     });
 });
+// Add this to your existing JavaScript
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
