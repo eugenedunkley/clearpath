@@ -1,95 +1,65 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Register GSAP plugins
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Logo animation
-    gsap.from('.logo', {
-        opacity: 0,
-        y: -50,
-        duration: 1,
-        ease: 'power3.out'
-    });
-
-    // Hero section animation
-    gsap.from('#hero h1, #hero p, #hero .btn', {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.2,
-        ease: 'power3.out'
-    });
-
-    // Animate sections on scroll
-    gsap.utils.toArray('section').forEach(section => {
-        gsap.from(section, {
-            opacity: 0,
-            y: 50,
-            duration: 1,
-            scrollTrigger: {
-                trigger: section,
-                start: 'top 80%',
-                end: 'bottom 20%',
-                toggleActions: 'play none none reverse'
-            }
-        });
-    });
-
-    // Service items animation
-    gsap.from('.service-item', {
-        opacity: 0,
-        y: 50,
-        duration: 1,
-        stagger: 0.2,
-        scrollTrigger: {
-            trigger: '#services',
-            start: 'top 60%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        }
-    });
-
-    // Featured list animation
-    gsap.from('.featured-list span', {
-        opacity: 0,
-        scale: 0.5,
-        duration: 1,
-        stagger: 0.2,
-        scrollTrigger: {
-            trigger: '#featured-on',
-            start: 'top 80%',
-            end: 'bottom 20%',
-            toggleActions: 'play none none reverse'
-        }
-    });
-});
-
-// GHL Calendar Integration (placeholder)
-function openGHLCalendar() {
-    // This function will be updated with the actual GHL calendar link
-    alert("The GHL calendar link will be integrated here.");
-    // When the link is available, replace the alert with:
-    // window.open('YOUR_GHL_CALENDAR_LINK', '_blank');
-}
-
-// Add event listener to the "Book a Call" button
-document.querySelector('#book-call .btn').addEventListener('click', openGHLCalendar);
-document.addEventListener('DOMContentLoaded', (event) => {
     // Animate logo
     document.querySelector('.logo').classList.add('fade-in');
 
     // Animate sections
     const sections = document.querySelectorAll('section');
     sections.forEach((section, index) => {
-        section.classList.add('slide-in');
+        section.classList.add('fade-in-up');
         section.style.animationDelay = `${index * 0.2}s`;
     });
-});
-// Add this to your existing JavaScript
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
+    });
+
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Animate elements on scroll
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementBottom = element.getBoundingClientRect().bottom;
+            if (elementTop < window.innerHeight && elementBottom > 0) {
+                element.classList.add('fade-in-up');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Initial check
+});
+
+// Placeholder function for booking a call
+function bookCall() {
+    // Replace this with actual booking logic when available
+    alert('Booking feature coming soon!');
+}
+
+// Add event listener to the "Book a Call" button
+document.addEventListener('DOMContentLoaded', (event) => {
+    const bookButtons = document.querySelectorAll('.btn');
+    bookButtons.forEach(button => {
+        button.addEventListener('click', bookCall);
     });
 });
