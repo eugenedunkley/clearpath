@@ -34,23 +34,29 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
 }
 
 nav a {
     color: var(--color-dark);
     text-decoration: none;
-    margin-left: 1.5rem;
     transition: color 0.3s ease;
 }
 
 nav a:hover {
     color: var(--color-primary);
-}
-
-.logo {
-    max-width: 200px;
-    height: auto;
 }
 
 .btn {
@@ -130,59 +136,7 @@ footer a {
     margin: 0 10px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        margin: 0.5rem 0;
-    }
-
-    .logo {
-        max-width: 150px;
-        margin-bottom: 1rem;
-    }
-
-    #hero h1 {
-        font-size: 2rem;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-item {
-        margin-bottom: 2rem;
-    }
-
-    .featured-list span {
-        font-size: 1rem;
-        margin: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    #hero h1 {
-        font-size: 1.75rem;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-
-    #about p {
-        font-size: 1rem;
-    }
-}
-/* Add these to your existing CSS */
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -199,4 +153,52 @@ footer a {
 
 .slide-in {
     animation: slideIn 1s ease-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .logo {
+        margin-bottom: 1rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    #hero h1 {
+        font-size: 2rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .service-item {
+        margin-bottom: 2rem;
+    }
+    .featured-list span {
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    #hero h1 {
+        font-size: 1.75rem;
+    }
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    #about p {
+        font-size: 1rem;
+    }
 }
