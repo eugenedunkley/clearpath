@@ -3,53 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - Clear Path</title>
+    <title>Our Services - Clear Path</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body><header>
-    <nav>
-        <img src="clearpath-logo.png" alt="Clear Path Logo" class="logo">
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-</header>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="clearpath-logo.png" alt="Clear Path Logo" class="logo"></a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
     <main>
-        <section id="services">
+        <section id="services" class="animate-on-scroll">
             <div class="container">
                 <h1>Our Services</h1>
-                <div class="grid">
-                    <div class="service-item">
-                        <h2>Financial Planning</h2>
-                        <p>We offer comprehensive financial planning services to help you achieve your long-term goals. Our expert advisors will work with you to create a personalized plan that considers your unique circumstances and aspirations.</p>
-                    </div>
-                    <div class="service-item">
-                        <h2>Investment Management</h2>
-                        <p>Our investment management services are designed to help you grow and protect your wealth. We use sophisticated strategies and diversified portfolios to manage risk and maximize returns.</p>
-                    </div>
-                    <div class="service-item">
-                        <h2>Retirement Planning</h2>
-                        <p>Plan for a secure and comfortable retirement with our expert guidance. We'll help you navigate pensions, savings, and investments to ensure you're prepared for your golden years.</p>
-                    </div>
-                    <div class="service-item">
-                        <h2>Tax Planning</h2>
-                        <p>Optimize your tax situation with our comprehensive tax planning services. We'll help you navigate complex tax laws and identify opportunities to minimize your tax burden legally and ethically.</p>
-                    </div>
-                    <div class="service-item">
-                        <h2>Estate Planning</h2>
-                        <p>Secure your legacy and protect your loved ones with our estate planning services. We'll help you navigate inheritance tax, set up trusts, and ensure your assets are distributed according to your wishes.</p>
-                    </div>
-                    <div class="service-item">
-                        <h2>Corporate Services</h2>
-                        <p>We offer a range of services for businesses, including employee benefits planning, corporate investment strategies, and succession planning to ensure your business's long-term success.</p>
-                    </div>
+                <p>At Clear Path, we offer a comprehensive range of financial services tailored to meet your unique needs and goals.</p>
+                
+                <div class="service-item">
+                    <img src="service1.jpg" alt="Investment Planning">
+                    <h2>Investment Planning</h2>
+                    <p>Our investment planning service is designed to help you make informed decisions about your financial future. We work closely with you to understand your goals, risk tolerance, and time horizon. Our expert advisors then create a tailored investment strategy that aligns with your objectives and adapts to changing market conditions.</p>
+                    <ul>
+                        <li>Personalized investment strategies</li>
+                        <li>Regular portfolio reviews and rebalancing</li>
+                        <li>Access to diverse investment options</li>
+                        <li>Risk management and mitigation</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <img src="service2.jpg" alt="Retirement Planning">
+                    <h2>Retirement Planning</h2>
+                    <p>Secure your future with our comprehensive retirement planning service. We help you navigate the complexities of pension schemes, savings plans, and investment strategies to ensure you can enjoy the retirement you've always dreamed of.</p>
+                    <ul>
+                        <li>Pension optimization</li>
+                        <li>Retirement income projections</li>
+                        <li>Estate planning considerations</li>
+                        <li>Long-term care planning</li>
+                    </ul>
+                </div>
+
+                <div class="service-item">
+                    <img src="service3.jpg" alt="Tax Mitigation">
+                    <h2>Tax Mitigation</h2>
+                    <p>Our tax mitigation service helps you navigate the complex world of taxation, ensuring you're not paying more than necessary. We use legal and ethical strategies to optimize your tax position, allowing you to keep more of your hard-earned money.</p>
+                    <ul>
+                        <li>Tax-efficient investment strategies</li>
+                        <li>Utilization of allowances and reliefs</li>
+                        <li>Inheritance tax planning</li>
+                        <li>Offshore planning for international clients</li>
+                    </ul>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <div class="container">
             <nav>
@@ -60,5 +79,7 @@
             </nav>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
