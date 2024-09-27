@@ -73,3 +73,14 @@ function openGHLCalendar() {
 
 // Add event listener to the "Book a Call" button
 document.querySelector('#book-call .btn').addEventListener('click', openGHLCalendar);
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Animate logo
+    document.querySelector('.logo').classList.add('fade-in');
+
+    // Animate sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        section.classList.add('slide-in');
+        section.style.animationDelay = `${index * 0.2}s`;
+    });
+});
