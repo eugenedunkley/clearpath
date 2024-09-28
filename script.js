@@ -1,46 +1,47 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    // Animate elements on page load
-    animateOnScroll();
-    window.addEventListener('scroll', animateOnScroll);
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-    // Hamburger menu functionality
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
+}
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
 
-    // Book a call button functionality
-    const bookCallBtn = document.getElementById('book-call-btn');
-    if (bookCallBtn) {
-        bookCallBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Replace with actual booking logic or link to booking system
-            alert('Booking functionality will be implemented here.');
-        });
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
     }
-});
-
-function animateOnScroll() {
-    const elements = document.querySelectorAll('.fade-in, .slide-in');
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementBottom = element.getBoundingClientRect().bottom;
-        const isVisible = (elementTop < window.innerHeight) && (elementBottom >= 0);
-        if (isVisible) {
-            element.classList.add('active');
-        }
-    });
 }
