@@ -4,97 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clear Path - Investment Advice</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-    <script src="/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="/" class="logo-link">
-    <img src="/clearpath-logo.png" alt="Clear Path Logo" class="logo fade-in">
-</a>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <a href="#" class="logo">Clear Path</a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+            <button class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main>
-        <section id="hero" class="fade-in">
+        <section id="hero">
             <div class="container">
                 <h1>Clear Path to Financial Success</h1>
                 <p>Expert investment advice for individuals and couples in the UK</p>
-                <a href="#contact" class="btn">Book a Call</a>
+                <a href="#contact" class="cta-button">Get Started</a>
             </div>
         </section>
 
-        <section id="featured-on" class="slide-in">
-            <div class="container">
-                <h2>Featured On</h2>
-                <div class="featured-list">
-                    <span>BBC</span>
-                    <span>BBC News</span>
-                    <span>BBC World News</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="fade-in">
-            <div class="container">
-                <h2>About Sarb Chahal</h2>
-                <p>Meet Sarb Chahal, a seasoned financial advisor who brings clarity to the complex world of investments. With over two decades of experience and a Chartered MCSI designation, Sarb has guided countless individuals and couples towards financial security. His approach combines deep market knowledge with a genuine commitment to understanding each client's unique goals. Whether you're planning for retirement, seeking to grow your wealth, or navigating major life changes, Sarb's expertise can illuminate the path forward. His clients appreciate not just his technical skills, but his ability to explain complex concepts in simple terms, making the journey to financial freedom both accessible and empowering.</p>
-            </div>
-        </section>
-
-        <section id="services" class="slide-in">
+        <section id="services">
             <div class="container">
                 <h2>Our Services</h2>
-                <div class="services-grid">
+                <div class="service-grid">
                     <div class="service-item">
-                        <img src="service1.jpg" alt="Service 1">
                         <h3>Investment Planning</h3>
-                        <p>Tailored investment strategies to meet your financial goals.</p>
+                        <p>Tailored strategies to meet your financial goals</p>
                     </div>
                     <div class="service-item">
-                        <img src="service2.jpg" alt="Service 2">
                         <h3>Retirement Planning</h3>
-                        <p>Secure your future with our comprehensive retirement plans.</p>
+                        <p>Secure your future with comprehensive plans</p>
                     </div>
                     <div class="service-item">
-                        <img src="service3.jpg" alt="Service 3">
                         <h3>Tax Optimization</h3>
-                        <p>Maximize your returns with our tax-efficient investment strategies.</p>
+                        <p>Maximize returns with tax-efficient strategies</p>
                     </div>
                 </div>
-                <a href="services.html" class="btn">View All Services</a>
             </div>
         </section>
 
-        <section id="contact" class="fade-in">
+        <section id="about">
             <div class="container">
-                <h2>Book a Call</h2>
-                <p>Ready to start your journey to financial clarity? Book a call with our expert advisors today.</p>
-                <a href="#" class="btn" id="book-call-btn">Schedule Now</a>
+                <h2>About Sarb Chahal</h2>
+                <p>Meet Sarb Chahal, a seasoned financial advisor with over two decades of experience. As a Chartered MCSI, Sarb combines deep market knowledge with a commitment to understanding each client's unique goals. His expertise in explaining complex concepts simply makes the journey to financial freedom both accessible and empowering.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <nav>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="site-disclaimer.html">Site Disclaimer</a>
-                <a href="accessibility.html">Accessibility</a>
-                <a href="terms-and-conditions.html">Terms and Conditions</a>
-            </nav>
             <p>&copy; 2024 Clear Path. All rights reserved.</p>
         </div>
     </footer>
