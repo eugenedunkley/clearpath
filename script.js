@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    // Animate logo
-    document.querySelector('.logo').classList.add('fade-in');
+    // Animate elements on page load
+    animateOnScroll();
+    window.addEventListener('scroll', animateOnScroll);
 
-    // Animate sections
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section, index) => {
-        section.classList.add('fade-in-up');
-        section.style.animationDelay = `${index * 0.2}s`;
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -19,47 +22,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    // Hamburger menu functionality
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+    // Book a call button functionality
+    const bookCallBtn = document.getElementById('book-call-btn');
+    if (bookCallBtn) {
+        bookCallBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Replace with actual booking logic or link to booking system
+            alert('Booking functionality will be implemented here.');
         });
-    });
-
-    // Animate elements on scroll
-    const animateOnScroll = () => {
-        const elements = document.querySelectorAll('.animate-on-scroll');
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const elementBottom = element.getBoundingClientRect().bottom;
-            if (elementTop < window.innerHeight && elementBottom > 0) {
-                element.classList.add('fade-in-up');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Initial check
+    }
 });
 
-// Placeholder function for booking a call
-function bookCall() {
-    // Replace this with actual booking logic when available
-    alert('Booking feature coming soon!');
+function animateOnScroll() {
+    const elements = document.querySelectorAll('.fade-in, .slide-in');
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        const isVisible = (elementTop < window.innerHeight) && (elementBottom >= 0);
+        if (isVisible) {
+            element.classList.add('active');
+        }
+    });
 }
-
-// Add event listener to the "Book a Call" button
-document.addEventListener('DOMContentLoaded', (event) => {
-    const bookButtons = document.querySelectorAll('.btn');
-    bookButtons.forEach(button => {
-        button.addEventListener('click', bookCall);
-    });
-});
