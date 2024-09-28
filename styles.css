@@ -1,121 +1,34 @@
-:root {
-    --color-primary: #69a8c8;
-    --color-secondary: #4a90e2; /* Changed to a more vibrant blue */
-    --color-dark: #2c3e50;
-    --color-background: #ffffff;
-    --font-primary: 'Open Sans', sans-serif;
+/* Add these new styles to the existing styles.css file */
+
+/* Legal Pages Styles (Privacy Policy, Site Disclaimer, Accessibility, Terms and Conditions) */
+#privacy-policy, #site-disclaimer, #accessibility, #terms-and-conditions {
+    padding-top: 120px;
+    padding-bottom: 60px;
 }
 
-/* ... (keep existing styles) ... */
-
-/* Updated footer styles */
-footer {
-    background-color: var(--color-dark);
-    color: var(--color-background);
-    padding: 2rem 0;
-    text-align: center;
-}
-
-footer nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-footer a {
-    color: var(--color-background);
-    text-decoration: none;
-    margin: 0.5rem 1rem;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
+#privacy-policy h1, #site-disclaimer h1, #accessibility h1, #terms-and-conditions h1 {
     color: var(--color-primary);
+    margin-bottom: 2rem;
 }
 
-/* Hamburger menu styles */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--color-dark);
-    margin: 2px 0;
-    transition: 0.4s;
-}
-
-/* Enhanced animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in-up {
-    animation: fadeInUp 0.6s ease-out;
-}
-
-/* Responsive styles update */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: var(--color-background);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    nav a {
-        padding: 0.5rem 0;
-    }
-}
-
-/* Contact form styles */
-.contact-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
+#privacy-policy h2, #site-disclaimer h2, #accessibility h2, #terms-and-conditions h2 {
+    color: var(--color-secondary);
+    margin-top: 2rem;
     margin-bottom: 1rem;
-    border: 1px solid var(--color-secondary);
-    border-radius: 4px;
 }
 
-.contact-form button {
-    background-color: var(--color-primary);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+#privacy-policy p, #site-disclaimer p, #accessibility p, #terms-and-conditions p,
+#privacy-policy ul, #site-disclaimer ul, #accessibility ul, #terms-and-conditions ul {
+    margin-bottom: 1rem;
 }
 
-.contact-form button:hover {
-    background-color: var(--color-secondary);
+#privacy-policy ul, #site-disclaimer ul, #accessibility ul, #terms-and-conditions ul {
+    padding-left: 2rem;
+}
+
+/* Responsive adjustments for legal pages */
+@media (max-width: 768px) {
+    #privacy-policy, #site-disclaimer, #accessibility, #terms-and-conditions {
+        padding-top: 100px;
+    }
 }
