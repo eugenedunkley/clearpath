@@ -1,34 +1,47 @@
-/* Add these new styles to the existing styles.css file */
-
-/* Legal Pages Styles (Privacy Policy, Site Disclaimer, Accessibility, Terms and Conditions) */
-#privacy-policy, #site-disclaimer, #accessibility, #terms-and-conditions {
-    padding-top: 120px;
-    padding-bottom: 60px;
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-#privacy-policy h1, #site-disclaimer h1, #accessibility h1, #terms-and-conditions h1 {
-    color: var(--color-primary);
-    margin-bottom: 2rem;
+header {
+    background-color: #f4f4f4;
+    padding: 1rem;
 }
 
-#privacy-policy h2, #site-disclaimer h2, #accessibility h2, #terms-and-conditions h2 {
-    color: var(--color-secondary);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-#privacy-policy p, #site-disclaimer p, #accessibility p, #terms-and-conditions p,
-#privacy-policy ul, #site-disclaimer ul, #accessibility ul, #terms-and-conditions ul {
-    margin-bottom: 1rem;
+nav ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
-#privacy-policy ul, #site-disclaimer ul, #accessibility ul, #terms-and-conditions ul {
-    padding-left: 2rem;
+nav ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
-/* Responsive adjustments for legal pages */
+.logo {
+    max-width: 150px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
 @media (max-width: 768px) {
-    #privacy-policy, #site-disclaimer, #accessibility, #terms-and-conditions {
-        padding-top: 100px;
+    body {
+        padding: 10px;
     }
 }
